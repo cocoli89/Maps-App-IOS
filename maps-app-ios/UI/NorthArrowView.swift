@@ -51,7 +51,7 @@ public class NorthArrowView: RoundedImageView {
     // Track any alpha override that may have been set in the Storyboard.
     private var initialAlpha:CGFloat?
     
-    @objc func resetNorth() {
+    func resetNorth() {
         self.mapView?.setViewpointRotation(0, completion: nil)
     }
     
