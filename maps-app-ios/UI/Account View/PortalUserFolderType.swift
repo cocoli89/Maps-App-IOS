@@ -18,12 +18,12 @@ enum PortalUserFolderType: Hashable, Equatable, CustomStringConvertible {
     case rootFolder(subFolders:[AGSPortalFolder])
     case folder(agsFolder: AGSPortalFolder)
     
-    func hash(into hasher: inout Hasher) {
+    var hashValue: Int {
         switch self {
         case .rootFolder:
-            hasher.combine(0)
+            return 0
         case .folder(let agsFolder):
-            hasher.combine(agsFolder.hash)
+            return agsFolder.hash
         }
     }
     
