@@ -24,9 +24,7 @@ extension MapViewController {
         
         mapView.locationDisplay.autoPanModeChangedHandler = { newAutoPanMode in
             print("New autoPanMode: \(newAutoPanMode)")
-            DispatchQueue.main.async {
-                self.gpsButton.setImage(self.mapView.locationDisplay.getImage(), for: .normal)
-            }
+            self.gpsButton.setImage(self.mapView.locationDisplay.getImage(), for: .normal)
         }
     }
     
